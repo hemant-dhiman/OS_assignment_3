@@ -20,7 +20,6 @@ int main(){
 	disc1[7] = 1750;
 	disc1[8] = 130;
 	int length = sizeof(disc1)/sizeof(current_pointer);//calculate the size of given data
-	//printf("length of given data: %d\n",length);
 	//map this given data to memory
 	for(int i = current_pointer;i<(length+current_pointer);i++){
 		disc[i] = disc1[i-current_pointer];
@@ -29,6 +28,7 @@ int main(){
 	for(int i = current_pointer;i<(length+current_pointer);i++){
 		printf(" , %d",disc[i]);
 	}
+	printf("\nStarting pointer 143 and length of given data: %d\n",length);
 	//using fifo (first come first serve)
 	int total_distance = current_pointer - disc[current_pointer];
 	//printf("length of given data: %d\n",total_distance);
@@ -39,6 +39,6 @@ int main(){
 		printf(" + %d",abs(disc[_current_pointer]-disc[_current_pointer-1]));
 		total_distance += abs(disc[_current_pointer]-disc[_current_pointer-1]);
 	}
-	printf("\n\nTotal movement of data: %d\n",total_distance);
+	printf("\nTotal movement(Distance) of data: %d\n",total_distance);
 	return 0;
 }
