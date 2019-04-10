@@ -4,7 +4,7 @@ another teacher comes, then that teacher would get the service (food) next.
 This process might continue leading to increase in waiting time of students to get food. 
 Ensure in your program that the waiting time of students is minimized.
 */
-
+//sir enter the priority for student and teacher process
 #include<stdio.h>
 #include<string.h>
 int main()
