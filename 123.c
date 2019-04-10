@@ -20,11 +20,21 @@ int main(){
 	disc1[7] = 1750;
 	disc1[8] = 130;
 	int length = sizeof(disc1)/sizeof(current_pointer);//calculate the size of given data
+	//bubble sort
+	for(int i = 0 ;i<length;i++){
+		for(int j = 0;j<length-1;j++){
+			if(disc1[j] > disc1[j+1]){
+				int temp = disc1[j];
+				disc1[j] = disc1[j+1];
+				disc1[j+1] = temp;
+			}
+		}
+	}
 	//map this given data to memory
 	for(int i = current_pointer;i<(length+current_pointer);i++){
 		disc[i] = disc1[i-current_pointer];
 	}
-	printf("\t----USING FCFS(FIRST COME FIRST SERVED)----\n\nSERVICE ORDER:- 143->");
+	printf("\t----USING SCAN disc-scheduling Algorithm----\n\nSERVICE ORDER:- 143->");
 	for(int i = current_pointer;i<(length+current_pointer);i++){
 		printf(" , %d",disc[i]);
 	}
